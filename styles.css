@@ -24,7 +24,7 @@
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
 
     display: flex;
     align-items: center;
@@ -36,7 +36,7 @@ body {
 }
 
 section {
-    width: 50%;
+    width: 80%;
     display: flex;
 }
 
@@ -99,4 +99,22 @@ article button:hover {
     background-color: transparent;
     border: 2px solid;
     border-color: var(--very-light-gray);
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        padding: 50px 0;
+    }
+
+    section {
+        flex-direction: column;
+    }
+
+    article:nth-child(1) {
+        border-radius: 10px 10px 0 0;
+    }
+
+    article:nth-child(3) {
+        border-radius: 0 0 10px 10px;
+    }
 }
